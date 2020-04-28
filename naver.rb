@@ -9,29 +9,6 @@ navertv_url = "https://tv.naver.com/"
 
 @browser.get navertv_url
 
-tops_xpath = "/html/body/div[2]/div[3]/div[2]/div[1]/div/div/ul/li"
-tops = @browser.find_elements(xpath: tops_xpath)
-
-next_btn_xpath = "/html/body/div[2]/div[3]/div[2]/div[1]/div/a[2]"
-next_btn = @browser.find_element(xpath: next_btn_xpath)
-
-tops.each do |item|
-    rank = item.find_element(tag_name: "strong").text.to_i
-    
-    if rank % 5 == 0
-        next_btn.click
-    end
-    
-    sleep 0.2
-    
-    title = item.find_element(tag_name: "tooltip").attribute("title")
-    puts "#{rank}: #{title}"
-    
-    if rank == 100
-        break
-    end
-end
-
 @browser.quit
 
 

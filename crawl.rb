@@ -9,10 +9,13 @@ insta_url = "https://www.instagram.com/jong1no/"
 
 @browser.get insta_url
 
-title_xpath = "/html/body/div[1]/section/main/div/header/section/div[1]/h1"
+title_xpath = ""
 
-title = @browser.find_element(xpath: title_xpath).text
+title = ""
 
 puts "title: #{title}"
 
 @browser.quit
+
+
+

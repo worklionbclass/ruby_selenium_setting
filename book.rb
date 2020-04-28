@@ -8,21 +8,4 @@ options.add_argument('--headless') # 크롬 헤드리스 모드 사용 위해 he
 url = "https://ridibooks.com/bestsellers/general"
 page = 1
 
-loop do 
-    @browser.get url + "?page=#{page}"
-                 
-    lists_path = "/html/body/div[3]/div[1]/div/div/section/div[2]/div"
-    lists = @browser.find_elements(xpath: lists_path)
-    
-    break if lists.length == 0
-    
-    lists.each do |item|
-        rank = item.find_element(class: "book_ranking").text
-        title = item.find_element(class: "title_text").text
-        p "#{rank}위 #{title}"
-    end
-    
-    page = page + 1
-end
-
 @browser.quit

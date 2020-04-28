@@ -9,21 +9,21 @@ insta_url = "https://www.instagram.com/jong1no/"
 
 @browser.get insta_url
 
-title_xpath = "/html/body/div[1]/section/main/div/header/section/div[1]/h1"
+title_xpath = ""
 
-title = @browser.find_element(xpath: title_xpath).text
+title = ""
 
-posts_xpath = "/html/body/div[1]/section/main/div/header/section/ul/li[1]/a/span"
+posts_xpath = ""
 
-posts = @browser.find_element(xpath: posts_xpath).text
+posts = ""
 
-followers_xpath = "/html/body/div[1]/section/main/div/header/section/ul/li[2]/a/span"
+followers_xpath = ""
 
-followers = @browser.find_element(xpath: followers_xpath).text
+followers = ""
 
-follows_xpath = "/html/body/div[1]/section/main/div/header/section/ul/li[3]/a/span"
+follows_xpath = ""
 
-follows = @browser.find_element(xpath: follows_xpath).text
+follows = ""
 
 puts "title: #{title}, posts: #{posts}, followers: #{followers}, follows: #{follows}"
 
