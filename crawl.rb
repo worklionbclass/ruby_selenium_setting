@@ -13,18 +13,6 @@ title_xpath = "/html/body/div[1]/section/main/div/header/section/div[1]/h1"
 
 title = @browser.find_element(xpath: title_xpath).text
 
-posts_xpath = "/html/body/div[1]/section/main/div/header/section/ul/li[1]/a/span"
-
-posts = @browser.find_element(xpath: posts_xpath).text
-
-followers_xpath = "/html/body/div[1]/section/main/div/header/section/ul/li[2]/a/span"
-
-followers = @browser.find_element(xpath: followers_xpath).text
-
-follows_xpath = "/html/body/div[1]/section/main/div/header/section/ul/li[3]/a/span"
-
-follows = @browser.find_element(xpath: follows_xpath).text
-
-puts "title: #{title}, posts: #{posts}, followers: #{followers}, follows: #{follows}"
+puts "title: #{title}"
 
 @browser.quit

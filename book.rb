@@ -24,3 +24,5 @@ loop do
     
     page = page + 1
 end
+
+@browser.quit
